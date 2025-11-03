@@ -3,7 +3,7 @@ import profileImage from "@/assets/andrea-profile.jpg";
 
 const About = () => {
   return (
-    <section id="sobre" className="pt-8 pb-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+    <section id="sobre" className="pt-6 md:pt-8 pb-16 md:pb-24 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden [content-visibility:auto] [contain-intrinsic-size:1px_900px]">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl animate-float" />

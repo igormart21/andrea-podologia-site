@@ -17,7 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 148 55% 12%;
 
-    --primary: 141 50% 40%;
+    /* #6d9c7f => hsl(143, 19%, 52%) */
+    --primary: 143 19% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 148 60% 12%;
@@ -34,19 +35,19 @@ All colors MUST be HSL.
 
     --border: 141 20% 75%;
     --input: 141 20% 75%;
-    --ring: 141 50% 40%;
+    --ring: 143 19% 52%;
 
     --radius: 0.75rem;
     
     /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(141, 50%, 40%) 0%, hsl(148, 60%, 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(143, 19%, 52%) 0%, hsl(148, 60%, 12%) 100%);
     --gradient-overlay: linear-gradient(90deg, hsl(148, 60%, 12%) 0%, hsl(148, 60%, 12%, 0.95) 40%, hsl(148, 60%, 12%, 0.7) 70%, transparent 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(141, 30%, 95%) 0%, hsl(0, 0%, 98%) 100%);
-    --gradient-professional: linear-gradient(135deg, hsl(141, 50%, 40%) 0%, hsl(141, 55%, 45%) 100%);
-    --shadow-soft: 0 4px 20px hsl(141, 50%, 40%, 0.15);
-    --shadow-card: 0 6px 30px hsl(141, 50%, 40%, 0.2);
-    --shadow-elevated: 0 10px 40px hsl(141, 50%, 40%, 0.25);
-    --shadow-hero: 0 0 60px hsl(141, 50%, 40%, 0.3);
+    --gradient-soft: linear-gradient(180deg, hsl(143, 19%, 96%) 0%, hsl(0, 0%, 98%) 100%);
+    --gradient-professional: linear-gradient(135deg, hsl(143, 19%, 52%) 0%, hsl(143, 25%, 57%) 100%);
+    --shadow-soft: 0 4px 20px hsl(143, 19%, 52%, 0.15);
+    --shadow-card: 0 6px 30px hsl(143, 19%, 52%, 0.2);
+    --shadow-elevated: 0 10px 40px hsl(143, 19%, 52%, 0.25);
+    --shadow-hero: 0 0 60px hsl(143, 19%, 52%, 0.3);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -77,7 +78,8 @@ All colors MUST be HSL.
     --popover: 148 33% 22%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 141 26% 52%;
+    /* Dark mode primary aligned to #6d9c7f tone */
+    --primary: 143 19% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 148 33% 26%;
@@ -94,7 +96,7 @@ All colors MUST be HSL.
 
     --border: 148 33% 26%;
     --input: 148 33% 26%;
-    --ring: 141 26% 52%;
+    --ring: 143 19% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -112,6 +114,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
 }

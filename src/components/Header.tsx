@@ -6,6 +6,9 @@ import logo from "@/assets/logo.png";
 
 const menuItems = [
   { label: "Tratamentos", href: "#tratamentos" },
+  { label: "Processo", href: "#processo" },
+  { label: "Galeria", href: "#galeria" },
+  { label: "FAQ", href: "#faq" },
   { label: "Avaliações", href: "#avaliacoes" },
   { label: "Sobre Nós", href: "#sobre" },
   { label: "Onde Estamos", href: "#localizacao" },
@@ -30,7 +33,7 @@ const Header = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const offset = 80;
+      const offset = 96;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -44,14 +47,14 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "shadow-[var(--shadow-soft)]" 
-          : ""
+          ? "bg-background/70 backdrop-blur-md border-b border-border/50" 
+          : "bg-background/40 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection("#inicio")}
@@ -60,7 +63,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Clínica de Podologia Andrea Lima" 
-              className="h-14 md:h-20 w-auto"
+              className="h-14 md:h-24 w-auto"
             />
           </button>
 
@@ -70,7 +73,7 @@ const Header = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="relative text-foreground hover:text-primary transition-colors font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left pb-1"
+                className="relative text-foreground/90 hover:text-primary transition-colors font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left pb-1"
               >
                 {item.label}
               </button>

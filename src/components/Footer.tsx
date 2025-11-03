@@ -5,13 +5,25 @@ const Footer = () => {
     <footer className="bg-secondary text-secondary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">Andrea Lima</h3>
               <p className="text-secondary-foreground leading-relaxed">
                 Podóloga especializada em cuidados com os pés, 
                 oferecendo atendimento humanizado e de excelência.
               </p>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4 text-lg">Links Rápidos</h4>
+              <ul className="space-y-2 text-secondary-foreground/90">
+                <li><a href="#tratamentos" className="hover:underline">Tratamentos</a></li>
+                <li><a href="#processo" className="hover:underline">Processo</a></li>
+                <li><a href="#galeria" className="hover:underline">Galeria</a></li>
+                <li><a href="#faq" className="hover:underline">FAQ</a></li>
+                <li><a href="#avaliacoes" className="hover:underline">Avaliações</a></li>
+                <li><a href="#localizacao" className="hover:underline">Contato</a></li>
+              </ul>
             </div>
             
             <div>
@@ -22,15 +34,6 @@ const Footer = () => {
                 <li>São Paulo - SP</li>
               </ul>
             </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4 text-lg">Horário</h4>
-              <ul className="space-y-2 text-secondary-foreground">
-                <li>Segunda a Sexta: 9h às 18h</li>
-                <li>Sábado: 9h às 13h</li>
-                <li>Domingo: Fechado</li>
-              </ul>
-            </div>
           </div>
           
           <div className="border-t border-secondary-foreground/20 pt-8 text-center">
@@ -38,7 +41,7 @@ const Footer = () => {
               Feito com <Heart className="h-4 w-4 fill-current" /> por Clínica de Podologia Andrea Lima
             </p>
             <p className="text-sm text-secondary-foreground mt-2">
-              CNPJ: 205.860.538-16
+              © {new Date().getFullYear()} - Todos os direitos reservados • CNPJ: 205.860.538-16
             </p>
           </div>
         </div>

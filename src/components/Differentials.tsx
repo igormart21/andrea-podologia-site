@@ -25,11 +25,11 @@ const differentials = [
 
 const Differentials = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section className="py-20 bg-gradient-to-b from-muted/20 to-background [content-visibility:auto] [contain-intrinsic-size:1px_800px]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary/5 rounded-full border border-primary/10">
-            <p className="text-sm font-medium text-primary">
+          <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f] rounded-full border border-primary/10">
+            <p className="text-sm font-medium text-primary-foreground">
               Nossos Diferenciais
             </p>
           </div>
@@ -53,7 +53,7 @@ const Differentials = () => {
                 className="bg-card p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] text-center group animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#6d9c7f] to-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-all duration-300">
                   <Icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg text-foreground mb-2">

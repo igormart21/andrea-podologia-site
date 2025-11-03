@@ -6,12 +6,12 @@ const Contact = () => {
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um atendimento.");
   
   return (
-    <section id="localizacao" className="py-20 bg-background">
+    <section id="localizacao" className="py-14 md:py-20 bg-background [content-visibility:auto] [contain-intrinsic-size:1px_1000px]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-              <p className="text-sm font-medium text-primary">
+            <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f] rounded-full">
+              <p className="text-sm font-medium text-primary-foreground">
                 Entre em Contato
               </p>
             </div>
@@ -28,10 +28,10 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Info */}
             <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="bg-card p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+              <div className="bg-card p-5 md:p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-primary" />
+                  <div className="w-12 h-12 bg-[#6d9c7f] rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Telefone</h3>
@@ -47,10 +47,10 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="bg-card p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+              <div className="bg-card p-5 md:p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-primary" />
+                  <div className="w-12 h-12 bg-[#6d9c7f] rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Endereço</h3>
@@ -69,10 +69,10 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="bg-card p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+              <div className="bg-card p-5 md:p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-6 w-6 text-primary" />
+                  <div className="w-12 h-12 bg-[#6d9c7f] rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Horário de Atendimento</h3>
@@ -122,11 +122,11 @@ const Contact = () => {
           </div>
           
           {/* CTA */}
-          <div className="mt-16 text-center bg-gradient-to-r from-primary/5 to-secondary/5 p-12 rounded-2xl border border-primary/10">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+          <div className="mt-16 text-center bg-gradient-to-r from-[#6d9c7f]/30 to-[#6d9c7f]/10 p-8 md:p-12 rounded-2xl border border-primary/10">
+            <h3 className="text-3xl font-bold text-primary-foreground mb-4">
               Pronto para Cuidar dos Seus Pés?
             </h3>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
               Agende agora seu atendimento e descubra como podemos ajudar você a ter pés mais saudáveis e felizes!
             </p>
             <Button 
