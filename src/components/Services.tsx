@@ -117,7 +117,7 @@ const Services = () => {
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um atendimento.");
 
   return (
-    <section id="tratamentos" className="py-14 md:py-20 bg-[#6d9c7f] [content-visibility:auto] [contain-intrinsic-size:1px_1000px]">
+    <section id="tratamentos" className="relative z-10 -mt-6 md:mt-0 py-14 md:py-20 bg-[#6d9c7f] rounded-t-3xl shadow-xl [content-visibility:auto] [contain-intrinsic-size:1px_1000px]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f] rounded-full border border-primary/10">
@@ -135,11 +135,11 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto items-stretch">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
+              <div key={index} className="animate-fade-in flex flex-col h-full" style={{ animationDelay: `${index * 0.05}s` }}>
                 <div className="h-56 md:h-60 w-full overflow-hidden rounded-2xl bg-card border border-border/50 shadow-sm flex items-center justify-center mb-4">
                   {service.image ? (
                     <img 
@@ -153,7 +153,7 @@ const Services = () => {
                     </div>
                   )}
                 </div>
-                <Card className="border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] bg-card overflow-hidden group">
+                <Card className="border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] bg-card overflow-hidden group h-full flex flex-col">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-xl flex items-start gap-2">
                       <Icon className="h-5 w-5 text-primary mt-1" />
@@ -163,7 +163,7 @@ const Services = () => {
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0">
+                  <CardContent className="pt-0 flex-1 flex flex-col">
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       {service.details}
                     </p>
@@ -174,7 +174,7 @@ const Services = () => {
                     </ul>
                     <Button 
                       variant="hero"
-                      className="w-full"
+                      className="w-full mt-auto"
                       onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
                     >
                       Agendar no WhatsApp

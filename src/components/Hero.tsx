@@ -1,19 +1,43 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-modern-clinic.jpg";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
   const whatsappNumber = "5511972492829";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um atendimento.");
+  const bgRef = useRef<HTMLDivElement | null>(null);
+  const rafRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY;
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(() => {
+        if (bgRef.current) {
+          // Intensidade ajustada
+          const offset = y * 0.5;
+          bgRef.current.style.transform = `translate3d(0, ${offset}px, 0)`;
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background with enhanced overlay and responsive attachment */}
-      {/* Mobile/Small screens: normal attachment (melhor desempenho) */}
+      {/* Mobile/Small screens: parallax suave via transform */}
       <div 
-        className="absolute inset-0 z-0 md:hidden block bg-center bg-cover"
+        ref={bgRef}
+        className="absolute inset-0 z-0 md:hidden block bg-center bg-cover will-change-transform pointer-events-none select-none"
         style={{
-          backgroundImage: `url(${heroImage})`
+          backgroundImage: `url(${heroImage})`,
+          transform: "translate3d(0,0,0)",
         }}
       />
       {/* Desktop (md+): background fixed para efeito parallax suave */}
