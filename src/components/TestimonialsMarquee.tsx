@@ -144,7 +144,7 @@ const TestimonialsMarquee = () => {
     <section id="avaliacoes" className="relative overflow-hidden py-20 bg-muted/20 [content-visibility:auto] [contain-intrinsic-size:1px_900px]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f] rounded-full border border-primary/10">
+          <div className="inline-block mb-4 px-4 py-2 bg-[#7FA384] rounded-full border border-primary/10">
             <p className="text-sm font-medium text-primary-foreground">Depoimentos</p>
           </div>
           <h2 className="text-4xl font-bold mb-6 text-foreground">O que dizem nossos pacientes</h2>

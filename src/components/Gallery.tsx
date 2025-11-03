@@ -34,11 +34,11 @@ const Gallery = () => {
         <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="metadata">
           <source src={spaceVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-[#6d9c7f]/40" />
+        <div className="absolute inset-0 bg-[#7FA384]/40" />
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f] rounded-full border border-primary/10">
+          <div className="inline-block mb-4 px-4 py-2 bg-[#7FA384] rounded-full border border-primary/10">
             <p className="text-sm font-medium text-primary-foreground">Nosso Espaço</p>
           </div>
           <h2 className="text-4xl font-bold mb-6 text-foreground">Nosso Espaço</h2>

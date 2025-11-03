@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import unhaEncravadaImg from "@/assets/exerese-de-unha-e-uma-cirurgia-segura-1024x536.jpg";
 import micoseImg from "@/assets/tratamento-para-micose-de-unha-em-sorocaba-feet-house.jpg";
 import olhoDePeixeImg from "@/assets/oAqyxEfORzCvk8pmCbLIgXGZIzAjmuMQQ1efSZ~tplv-tiktokx-origin.image.jpeg";
-import pesDiabeticosImg from "@/assets/iStock-175483656-min.jpg";
+import pesDiabeticosImg from "@/assets/Pe-diabetico-causas-e-tratamentos.png";
 import calosFissurasImg from "@/assets/20-calos-o-que-fazer.jpg";
 import laserImg from "@/assets/micose.jpg";
 import autismoImg from "@/assets/fisioterapia-no-autismo.jpg";
@@ -22,13 +22,13 @@ const services: ServiceItem[] = [
   {
     icon: Scissors,
     title: "Unha Encravada (Onicriptose)",
-    description: "Tratamento especializado e seguro para alívio da dor e correção do quadro.",
+    description: "Tratamento sem dor e seguro para alívio imediato e correção do quadro.",
     details:
-      "Atuação precisa com técnicas minimamente invasivas para liberar a espícula e orientar a curvatura da unha. Foco em conforto imediato e prevenção de recidivas.",
+      "Técnicas minimamente invasivas e indolores para liberar a espícula e orientar a curvatura da unha. Conforto durante todo o procedimento e prevenção de recidivas.",
     highlights: [
-      "Alívio rápido da dor",
-      "Técnicas seguras e higiênicas",
-      "Orientações para cuidados em casa",
+      "Procedimento indolor",
+      "Técnica minimamente invasiva",
+      "Cuidados claros para casa",
     ],
     image: unhaEncravadaImg,
   },
@@ -117,16 +117,16 @@ const Services = () => {
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um atendimento.");
 
   return (
-    <section id="tratamentos" className="relative z-10 -mt-6 md:mt-0 py-14 md:py-20 bg-[#6d9c7f] rounded-t-3xl shadow-xl [content-visibility:auto] [contain-intrinsic-size:1px_1000px]">
+    <section id="tratamentos" className="relative z-10 -mt-6 md:mt-0 py-14 md:py-20 bg-[#2f5d46] rounded-t-3xl shadow-xl [content-visibility:auto] [contain-intrinsic-size:1px_1000px]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f] rounded-full border border-primary/10">
-            <p className="text-sm font-medium text-primary-foreground">
+          <div className="inline-block mb-4 px-4 py-2 bg-white/10 rounded-full border border-white/20">
+            <p className="text-sm font-medium text-white">
               Procedimentos
             </p>
           </div>
           
-          <h2 className="text-4xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl font-bold mb-6 text-white">
             Tratamentos Especializados para Seus Pés
           </h2>
           
@@ -140,7 +140,7 @@ const Services = () => {
             const Icon = service.icon;
             return (
               <div key={index} className="animate-fade-in flex flex-col h-full" style={{ animationDelay: `${index * 0.05}s` }}>
-                <div className="h-56 md:h-60 w-full overflow-hidden rounded-2xl bg-card border border-border/50 shadow-sm flex items-center justify-center mb-4">
+                <div className="h-56 md:h-60 w-full overflow-hidden rounded-2xl bg-white/10 border border-white/20 shadow-sm flex items-center justify-center mb-4">
                   {service.image ? (
                     <img 
                       src={service.image} 
@@ -148,33 +148,36 @@ const Services = () => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                      <Icon className="h-12 w-12 text-primary" />
+                    <div className="W-full h-full bg-white/10 flex items-center justify-center">
+                      <Icon className="h-12 w-12 text-white" />
                     </div>
                   )}
                 </div>
-                <Card className="border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] bg-card overflow-hidden group h-full flex flex-col">
+                <Card className="border border-white/20 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-[1.01] bg-[#7FA384] overflow-hidden group h-full flex flex-col">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-xl flex items-start gap-2">
-                      <Icon className="h-5 w-5 text-primary mt-1" />
+                    <div className="w-max mx-auto mb-2 px-3 py-1 rounded-full bg-white/15 text-white text-xs font-semibold tracking-wide text-center">
+                      <span className="text-xs font-semibold text-white">Podologia sem dor</span>
+                    </div>
+                    <CardTitle className="text-xl flex items-start gap-2 text-white">
+                      <Icon className="h-5 w-5 text-white mt-1" />
                       {service.title}
                     </CardTitle>
-                    <CardDescription className="text-base leading-relaxed mt-1">
+                    <CardDescription className="text-base leading-relaxed mt-1 text-white/90">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 flex-1 flex flex-col">
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-white/90 leading-relaxed mb-4">
                       {service.details}
                     </p>
-                    <ul className="text-muted-foreground text-sm space-y-2 mb-6 list-disc pl-5">
+                    <ul className="text-white/90 text-sm space-y-2 mb-6 list-disc pl-5">
                       {service.highlights.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
                     </ul>
                     <Button 
-                      variant="hero"
-                      className="w-full mt-auto"
+                      variant="default"
+                      className="w-full mt-auto bg-white text-[#7FA384] hover:bg-white/90 border border-white"
                       onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
                     >
                       Agendar no WhatsApp

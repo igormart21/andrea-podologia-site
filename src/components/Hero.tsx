@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
-import heroImage from "@/assets/hero-modern-clinic.jpg";
+import heroImage from "@/assets/enhanced_PHOTO-2025-11-03-12-39-29.png";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -15,8 +15,8 @@ const Hero = () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       rafRef.current = requestAnimationFrame(() => {
         if (bgRef.current) {
-          // Intensidade ajustada
-          const offset = y * 0.5;
+          // Intensidade aumentada
+          const offset = y * 0.7;
           bgRef.current.style.transform = `translate3d(0, ${offset}px, 0)`;
         }
       });
@@ -34,7 +34,7 @@ const Hero = () => {
       {/* Mobile/Small screens: parallax suave via transform */}
       <div 
         ref={bgRef}
-        className="absolute inset-0 z-0 md:hidden block bg-center bg-cover will-change-transform pointer-events-none select-none"
+        className="absolute inset-0 z-0 md:hidden block bg-[85%_20%] bg-contain bg-no-repeat will-change-transform pointer-events-none select-none"
         style={{
           backgroundImage: `url(${heroImage})`,
           transform: "translate3d(0,0,0)",
@@ -42,7 +42,7 @@ const Hero = () => {
       />
       {/* Desktop (md+): background fixed para efeito parallax suave */}
       <div 
-        className="absolute inset-0 z-0 hidden md:block bg-center bg-cover bg-fixed"
+        className="absolute inset-0 z-0 hidden md:block bg-[75%_20%] bg-contain bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `url(${heroImage})`
         }}
@@ -54,9 +54,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 py-20 pb-8">
         <div className="max-w-3xl">
           <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-6 md:p-10">
+            <h2 className="text-5xl md:text-7xl font-bold mb-4 leading-tight text-white drop-shadow-lg animate-fade-in-up">
+              Podologia sem dor
+            </h2>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight animate-fade-in-up">
               <span className="text-white drop-shadow-lg">
-                Cuidar dos seus pés é cuidar da sua{" "}
+                cuidar dos seus pés é cuidar da sua{" "}
               </span>
               <span className="text-primary">
                 saúde
@@ -80,25 +83,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Trust Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <div className="text-3xl font-extrabold text-primary">8+</div>
-                <div className="text-primary/90 text-sm">Anos de experiência</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <div className="text-3xl font-extrabold text-primary">2k+</div>
-                <div className="text-primary/90 text-sm">Atendimentos</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <div className="text-3xl font-extrabold text-primary">5★</div>
-                <div className="text-primary/90 text-sm">Avaliações</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <div className="text-3xl font-extrabold text-primary">100%</div>
-                <div className="text-primary/90 text-sm">Acolhimento</div>
-              </div>
-            </div>
+            
           </div>
           
         </div>

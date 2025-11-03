@@ -29,7 +29,7 @@ const Testimonials = () => {
     <section id="avaliacoes" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f]/30 rounded-full border border-primary/10">
+          <div className="inline-block mb-4 px-4 py-2 bg-[#7FA384]/30 rounded-full border border-primary/10">
             <p className="text-sm font-medium text-primary">
               Depoimentos
             </p>

@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16 animate-fade-in">
-            <div className="inline-block mb-4 px-4 py-2 bg-[#6d9c7f] rounded-full">
+            <div className="inline-block mb-4 px-4 py-2 bg-[#7FA384] rounded-full">
               <p className="text-sm font-medium text-primary-foreground">
                 Entre em Contato
               </p>
@@ -30,7 +30,7 @@ const Contact = () => {
             <div className="space-y-4 md:space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="bg-card p-5 md:p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#6d9c7f] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#7FA384] rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 md:h-6 md:w-6 text-primary-foreground" />
                   </div>
                   <div>
@@ -51,7 +51,7 @@ const Contact = () => {
               
               <div className="bg-card p-5 md:p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#6d9c7f] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#7FA384] rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 md:h-6 md:w-6 text-primary-foreground" />
                   </div>
                   <div>
@@ -73,7 +73,7 @@ const Contact = () => {
               
               <div className="bg-card p-5 md:p-6 rounded-xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#6d9c7f] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#7FA384] rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="h-5 w-5 md:h-6 md:w-6 text-primary-foreground" />
                   </div>
                   <div>
@@ -122,7 +122,7 @@ const Contact = () => {
           </div>
           
           {/* CTA */}
-          <div className="mt-12 md:mt-16 text-center bg-gradient-to-r from-[#6d9c7f]/30 to-[#6d9c7f]/10 p-8 md:p-12 rounded-2xl border border-primary/10">
+          <div className="mt-12 md:mt-16 text-center bg-gradient-to-r from-[#7FA384]/30 to-[#7FA384]/10 p-8 md:p-12 rounded-2xl border border-primary/10">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4">
               Pronto para Cuidar dos Seus Pés?
             </h3>
