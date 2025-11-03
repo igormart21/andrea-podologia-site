@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
-import heroImage from "@/assets/enhanced_PHOTO-2025-11-03-12-39-29.png";
+import heroImage from "@/assets/hero-modern-clinic.jpg";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -34,7 +34,7 @@ const Hero = () => {
       {/* Mobile/Small screens: parallax suave via transform */}
       <div 
         ref={bgRef}
-        className="absolute inset-0 z-0 md:hidden block bg-[85%_20%] bg-contain bg-no-repeat will-change-transform pointer-events-none select-none"
+        className="absolute inset-0 z-0 md:hidden block bg-center bg-cover will-change-transform pointer-events-none select-none"
         style={{
           backgroundImage: `url(${heroImage})`,
           transform: "translate3d(0,0,0)",
@@ -42,7 +42,7 @@ const Hero = () => {
       />
       {/* Desktop (md+): background fixed para efeito parallax suave */}
       <div 
-        className="absolute inset-0 z-0 hidden md:block bg-[75%_20%] bg-contain bg-no-repeat bg-fixed"
+        className="absolute inset-0 z-0 hidden md:block bg-center bg-cover bg-fixed"
         style={{
           backgroundImage: `url(${heroImage})`
         }}
@@ -59,7 +59,7 @@ const Hero = () => {
             </h2>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight animate-fade-in-up">
               <span className="text-white drop-shadow-lg">
-                cuidar dos seus pés é cuidar da sua{" "}
+                Cuidar dos seus pés é cuidar da sua{" "}
               </span>
               <span className="text-primary">
                 saúde
