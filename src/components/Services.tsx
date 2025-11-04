@@ -22,7 +22,7 @@ const services: ServiceItem[] = [
   {
     icon: Scissors,
     title: "Unha Encravada (Onicriptose)",
-    description: "Tratamento seguro para alívio rápido e correção.",
+    description: "Tratamento seguro e sem dor para alívio rápido e correção.",
     details:
       "Técnica minimamente invasiva para liberar a espícula e ajustar a curvatura, com conforto e prevenção de recidivas.",
     highlights: [
@@ -170,11 +170,6 @@ const Services = () => {
                     <p className="text-white/90 leading-relaxed mb-4">
                       {service.details}
                     </p>
-                    <ul className="text-white/90 text-sm space-y-2 mb-6 list-disc pl-5">
-                      {service.highlights.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
                     <Button 
                       variant="default"
                       className="w-full mt-auto bg-white text-[#7FA384] hover:bg-white/90 border border-white"
