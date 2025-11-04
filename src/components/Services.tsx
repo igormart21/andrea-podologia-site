@@ -22,9 +22,9 @@ const services: ServiceItem[] = [
   {
     icon: Scissors,
     title: "Unha Encravada (Onicriptose)",
-    description: "Tratamento sem dor e seguro para alívio imediato e correção do quadro.",
+    description: "Tratamento seguro para alívio rápido e correção.",
     details:
-      "Técnicas minimamente invasivas e indolores para liberar a espícula e orientar a curvatura da unha. Conforto durante todo o procedimento e prevenção de recidivas.",
+      "Técnica minimamente invasiva para liberar a espícula e ajustar a curvatura, com conforto e prevenção de recidivas.",
     highlights: [
       "Procedimento indolor",
       "Técnica minimamente invasiva",
@@ -35,9 +35,9 @@ const services: ServiceItem[] = [
   {
     icon: Shield,
     title: "Micose (Onicomicose)",
-    description: "Abordagem clínica com orientações e acompanhamento para recuperação eficaz.",
+    description: "Abordagem clínica com orientação e acompanhamento.",
     details:
-      "Identificação do tipo de micose, indicação de terapias adjuntas e rotina de cuidados para restabelecer a saúde e a estética das unhas.",
+      "Identificação do tipo, terapias adjuntas e rotina de cuidados para recuperar a saúde das unhas.",
     highlights: [
       "Avaliação personalizada",
       "Orientações de higiene e prevenção",
@@ -48,9 +48,9 @@ const services: ServiceItem[] = [
   {
     icon: Eye,
     title: "Olho de Peixe (Adultos e Crianças)",
-    description: "Remoção precisa e cuidadosa, com técnicas confortáveis e seguras.",
+    description: "Remoção precisa, confortável e segura.",
     details:
-      "Atendimento acolhedor, especialmente em crianças, com técnicas que visam reduzir o desconforto e acelerar a recuperação.",
+      "Atendimento acolhedor que reduz o desconforto e acelera a recuperação.",
     highlights: [
       "Técnica delicada",
       "Materiais esterilizados",
@@ -61,9 +61,9 @@ const services: ServiceItem[] = [
   {
     icon: HeartPulse,
     title: "Pés Diabéticos e Geriátricos",
-    description: "Cuidados preventivos e terapêuticos com atenção a riscos e sensibilidades.",
+    description: "Cuidados preventivos e terapêuticos com atenção a riscos.",
     details:
-      "Avaliação vascular e sensorial, corte técnico e medidas de proteção para evitar lesões, infecções e complicações.",
+      "Avaliação vascular e sensorial, corte técnico e proteção para evitar lesões e infecções.",
     highlights: [
       "Prevenção de feridas",
       "Corte técnico e seguro",
@@ -74,9 +74,9 @@ const services: ServiceItem[] = [
   {
     icon: Footprints,
     title: "Calos e Fissuras",
-    description: "Redução, hidratação e proteção para restaurar o conforto ao caminhar.",
+    description: "Redução, hidratação e proteção para voltar a caminhar bem.",
     details:
-      "Remoção controlada de calosidade, alinhada a hidratação profunda e recomendações de palmilhas/proteções quando necessário.",
+      "Remoção controlada, hidratação profunda e indicação de palmilhas quando necessário.",
     highlights: [
       "Remoção segura",
       "Hidratação intensiva",
@@ -87,9 +87,9 @@ const services: ServiceItem[] = [
   {
     icon: Sparkles,
     title: "Tratamento a Laser",
-    description: "Tecnologia como aliada no cuidado com unhas e pele, conforme avaliação.",
+    description: "Tecnologia aliada ao cuidado, conforme avaliação.",
     details:
-      "Aplicação focada para auxiliar em processos inflamatórios e apoio em protocolos específicos (conforme elegibilidade).",
+      "Aplicação focada para apoiar processos inflamatórios e protocolos específicos.",
     highlights: [
       "Tecnologia moderna",
       "Apoio à cicatrização",
@@ -100,9 +100,9 @@ const services: ServiceItem[] = [
   {
     icon: Puzzle,
     title: "Especializada Crianças com Autismo 🎗️",
-    description: "Atendimento adaptado, acolhedor e sensível às necessidades do TEA.",
+    description: "Atendimento adaptado e acolhedor ao TEA.",
     details:
-      "Abordagem gradual, ambiente tranquilo e comunicação respeitosa para reduzir estímulos e aumentar o conforto da criança.",
+      "Abordagem gradual, ambiente tranquilo e comunicação respeitosa para maior conforto.",
     highlights: [
       "Ambiente acolhedor",
       "Ritmo da criança respeitado",
