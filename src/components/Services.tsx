@@ -8,6 +8,7 @@ import pesDiabeticosImg from "@/assets/Pe-diabetico-causas-e-tratamentos.png";
 import calosFissurasImg from "@/assets/20-calos-o-que-fazer.jpg";
 import laserImg from "@/assets/micose.jpg";
 import autismoImg from "@/assets/fisioterapia-no-autismo.jpg";
+import orteseImg from "@/assets/WhatsApp Image 2025-11-04 at 07.26.29.jpeg";
 
 type ServiceItem = {
   icon: any;
@@ -31,6 +32,15 @@ const services: ServiceItem[] = [
       "Cuidados claros para casa",
     ],
     image: unhaEncravadaImg,
+  },
+  {
+    icon: Shield,
+    title: "Órtese (Correção da Curvatura)",
+    description:
+      "Uma Órtese é um Tratamento usado para correção da curvatura da unha, usado para tratar unhas encravadas, para evitar recidiva.",
+    details: "",
+    highlights: [],
+    image: orteseImg,
   },
   {
     icon: Shield,
@@ -145,7 +155,7 @@ const Services = () => {
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${service.title === "Micose (Onicomicose)" ? "object-[center_35%]" : "object-[center_60%]"}`}
                     />
                   ) : (
                     <div className="W-full h-full bg-white/10 flex items-center justify-center">

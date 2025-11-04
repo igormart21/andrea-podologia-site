@@ -12,7 +12,7 @@ const menuItems = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const whatsappNumber = "5511972492829";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um atendimento.");
 
@@ -36,16 +36,16 @@ const Header = () => {
   };
 
   return (
-    <header
+    <header 
       className={`absolute top-0 left-1/2 -translate-x-1/2 mt-3.5 z-50 transition-all duration-300 ${
         isScrolled ? "shadow-xl" : "shadow-xl"
       } w-[92%] sm:w-[90%] max-w-[1280px] rounded-full bg-white dark:bg-white px-8 py-4`}
     >
       <div className="flex justify-between items-center">
-        {/* Logo */}
+          {/* Logo */}
         <button onClick={() => scrollToSection("#inicio")} className="shrink-0">
           <img src={logo} alt="Logo-Header" className="h-12 sm:h-14 w-auto" />
-        </button>
+          </button>
 
         <div className="flex items-center gap-4">
           {/* Menu Desktop */}
@@ -106,15 +106,15 @@ const Header = () => {
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        {menuItems.map((item) => (
-          <button
-            key={item.href}
-            onClick={() => scrollToSection(item.href)}
+                  {menuItems.map((item) => (
+                    <button
+                      key={item.href}
+                      onClick={() => scrollToSection(item.href)}
             className="hover:text-[#dedede] transition-all"
-          >
-            {item.label}
-          </button>
-        ))}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
         <a
           href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
           target="_blank"
