@@ -1,32 +1,26 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { MessageCircle, Menu, X } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logo from "@/assets/logo.png";
 
 const menuItems = [
+  { label: "Início", href: "#inicio" },
   { label: "Tratamentos", href: "#tratamentos" },
-  { label: "Processo", href: "#processo" },
-  { label: "Galeria", href: "#galeria" },
-  { label: "FAQ", href: "#faq" },
   { label: "Avaliações", href: "#avaliacoes" },
   { label: "Sobre Nós", href: "#sobre" },
-  { label: "Onde Estamos", href: "#localizacao" },
+  { label: "Onde Estamos", href: "#local" },
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const whatsappNumber = "5511972492829";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar um atendimento.");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 8);
     };
-    
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -36,97 +30,102 @@ const Header = () => {
       const offset = 96;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
     setIsOpen(false);
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/70 backdrop-blur-md border-b border-border/50" 
-          : "bg-background/40 backdrop-blur-sm"
-      }`}
+    <header
+      className={`absolute top-0 left-1/2 -translate-x-1/2 mt-3.5 z-50 transition-all duration-300 ${
+        isScrolled ? "shadow-xl" : "shadow-xl"
+      } w-[92%] sm:w-[90%] max-w-[1280px] rounded-full bg-white dark:bg-white px-8 py-4`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Logo */}
-          <button 
-            onClick={() => scrollToSection("#inicio")}
-            className="hover:scale-105 transition-transform duration-300"
-          >
-            <img 
-              src={logo} 
-              alt="Clínica de Podologia Andrea Lima" 
-              className="h-14 md:h-24 w-auto"
-            />
-          </button>
+      <div className="flex justify-between items-center">
+        {/* Logo */}
+        <button onClick={() => scrollToSection("#inicio")} className="shrink-0">
+          <img src={logo} alt="Logo-Header" className="h-12 sm:h-14 w-auto" />
+        </button>
 
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center gap-8">
+        <div className="flex items-center gap-4">
+          {/* Menu Desktop */}
+          <nav className="hidden md:flex gap-4 text-[#4F705C] text-sm">
             {menuItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="relative text-foreground/90 hover:text-primary transition-colors font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left pb-1"
+                className="hover:text-[#dedede] transition-all"
               >
                 {item.label}
               </button>
             ))}
-            
-            <Button 
-              variant="hero" 
-              size="default"
-              onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
-            >
-              <MessageCircle className="h-4 w-4" />
-              Agendar Agora
-            </Button>
           </nav>
 
-          {/* Mobile Menu */}
-          <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] bg-background">
-                <div className="flex flex-col gap-6 mt-8">
-                  {menuItems.map((item) => (
-                    <button
-                      key={item.href}
-                      onClick={() => scrollToSection(item.href)}
-                      className="text-lg text-foreground hover:text-primary transition-colors font-medium text-left"
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                  
-                  <Button 
-                    variant="hero" 
-                    size="lg"
-                    className="w-full mt-4"
-                    onClick={() => {
-                      window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
-                      setIsOpen(false);
-                    }}
-                  >
-                    <MessageCircle className="h-5 w-5" />
-                    Agendar Agora
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
+          {/* CTA Desktop */}
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden md:block group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384]"
+          >
+            <span className="relative z-10 text-[#7FA384] transition-colors duration-400 group-hover:text-white active:text-white">
+              Agendar Agora
+            </span>
+            <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
+          </a>
+        </div>
+
+        {/* Botão sanduíche */}
+        <div
+          className={`sanduiche block md:hidden w-10 h-10 cursor-pointer z-50 ${isOpen ? "active" : ""}`}
+          onClick={() => setIsOpen((v) => !v)}
+        >
+          <div className="group relative w-full h-full flex flex-col justify-center items-center gap-1.5">
+            <span
+              className={`barra block h-1 w-8 bg-[#4F705C] rounded transition-all duration-300 ${
+                isOpen ? "translate-y-[10px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`barra block h-1 w-8 bg-[#4F705C] rounded transition-all duration-300 ${
+                isOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`barra block h-1 w-8 bg-[#4F705C] rounded transition-all duration-300 ${
+                isOpen ? "-translate-y-[10px] -rotate-45" : ""
+              }`}
+            />
           </div>
         </div>
       </div>
+
+      {/* Menu Mobile fullscreen */}
+      <nav
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white py-10 flex flex-col items-center gap-6 text-[#4F705C] text-base transition-all duration-300 z-40 ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        {menuItems.map((item) => (
+          <button
+            key={item.href}
+            onClick={() => scrollToSection(item.href)}
+            className="hover:text-[#dedede] transition-all"
+          >
+            {item.label}
+          </button>
+        ))}
+        <a
+          href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+          target="_blank"
+          rel="noreferrer"
+          className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-[#7FA384]"
+          onClick={() => setIsOpen(false)}
+        >
+          <span className="relative z-10 text-[#7FA384] transition-colors duration-400 group-hover:text-white active:text-white">Agendar Agora</span>
+          <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
+        </a>
+      </nav>
     </header>
   );
 };
