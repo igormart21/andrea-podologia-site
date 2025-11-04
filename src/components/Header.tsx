@@ -66,9 +66,9 @@ const Header = () => {
             href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
             target="_blank"
             rel="noreferrer"
-            className="hidden md:block group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384]"
+            className="hidden md:block group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
           >
-            <span className="relative z-10 text-[#7FA384] transition-colors duration-400 group-hover:text-white active:text-white">
+            <span className="relative z-10">
               Agendar Agora
             </span>
             <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
@@ -119,10 +119,10 @@ const Header = () => {
           href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
           target="_blank"
           rel="noreferrer"
-          className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-[#7FA384]"
+          className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
           onClick={() => setIsOpen(false)}
         >
-          <span className="relative z-10 text-[#7FA384] transition-colors duration-400 group-hover:text-white active:text-white">Agendar Agora</span>
+          <span className="relative z-10">Agendar Agora</span>
           <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
         </a>
       </nav>

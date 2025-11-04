@@ -61,15 +61,18 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8 animate-fade-in-up justify-start" style={{ animationDelay: "0.4s" }}>
-              <Button 
-                variant="hero" 
-                size="sm"
-                className="shadow-[var(--shadow-hero)] hover:scale-105 transition-transform duration-300"
-                onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noreferrer"
+                className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
               >
-                <MessageCircle className="h-5 w-5" />
-                Agendar Atendimento
-              </Button>
+                <span className="relative z-10 flex items-center gap-2">
+                  <MessageCircle className="h-4 w-4" />
+                  Agendar Agora
+                </span>
+                <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
+              </a>
             </div>
 
             
