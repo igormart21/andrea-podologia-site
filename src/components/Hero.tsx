@@ -48,8 +48,8 @@ const Hero = () => {
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 py-20 pb-8">
-        <div className="w-full max-w-3xl mx-auto">
-          <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-3 md:p-6 max-w-sm sm:max-w-md md:max-w-2xl mx-auto">
+        <div className="w-full max-w-3xl mx-auto md:mx-0 md:mr-auto">
+          <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-3 md:p-6 max-w-sm sm:max-w-md md:max-w-2xl mx-auto md:mx-0">
             
             <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight animate-fade-in-up">
               <span className="text-white drop-shadow-lg block">Podologa</span>
