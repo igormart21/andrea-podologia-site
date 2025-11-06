@@ -155,7 +155,7 @@ const Services = () => {
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className={`w-full h-full object-cover ${service.title === "Micose (Onicomicose)" ? "object-[center_35%]" : "object-[center_60%]"}`}
+                      className={`w-full h-full object-cover ${service.title === "Micose (Onicomicose)" ? "object-[center_30%]" : "object-[center_60%]"}`}
                     />
                   ) : (
                     <div className="W-full h-full bg-white/10 flex items-center justify-center">
