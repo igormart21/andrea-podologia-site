@@ -2,7 +2,7 @@ import { Footprints, Scissors, Eye, HeartPulse, Puzzle, Sparkles, Shield } from 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import unhaEncravadaImg from "@/assets/exerese-de-unha-e-uma-cirurgia-segura-1024x536.jpg";
-import micoseImg from "@/assets/tratamento-para-micose-de-unha-em-sorocaba-feet-house.jpg";
+import micoseImg from "@/assets/WhatsApp Image 2025-11-05 at 05.41.58.jpeg";
 import olhoDePeixeImg from "@/assets/oAqyxEfORzCvk8pmCbLIgXGZIzAjmuMQQ1efSZ~tplv-tiktokx-origin.image.jpeg";
 import pesDiabeticosImg from "@/assets/Pe-diabetico-causas-e-tratamentos.png";
 import calosFissurasImg from "@/assets/20-calos-o-que-fazer.jpg";
