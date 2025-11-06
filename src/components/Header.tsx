@@ -44,7 +44,7 @@ const Header = () => {
       <div className="flex justify-between items-center">
           {/* Logo */}
         <button onClick={() => scrollToSection("#inicio")} className="shrink-0">
-          <img src={logo} alt="Logo-Header" className="h-18 sm:h-20 w-auto" />
+          <img src={logo} alt="Logo-Header" className="h-16 sm:h-20 w-auto" />
           </button>
 
         <div className="flex items-center gap-4">
