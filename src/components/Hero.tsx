@@ -35,7 +35,7 @@ const Hero = () => {
       <div 
         id="parallax-bg"
         ref={bgRef}
-        className="absolute inset-0 z-0 block bg-cover bg-no-repeat bg-[position:70%_center] sm:bg-center will-change-transform pointer-events-none select-none"
+        className="absolute inset-0 z-0 block bg-cover bg-no-repeat bg-[position:70%_center] md:bg-[position:center_60%] will-change-transform pointer-events-none select-none"
         style={{
           backgroundImage: `url(${heroImage})`,
           transform: "translate3d(0,0,0)",
