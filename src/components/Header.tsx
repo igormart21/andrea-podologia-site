@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/WhatsApp Image 2025-11-05 at 06.03.32.jpeg";
 
 const menuItems = [
   { label: "Início", href: "#inicio" },
