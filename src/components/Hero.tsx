@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
-import heroImage from "@/assets/hero-modern-clinic.jpg";
+import heroImage from "@/assets/WhatsApp Image 2025-11-06 at 08.04.28.jpeg";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
