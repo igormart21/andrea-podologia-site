@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import spaceVideo from "@/assets/WhatsApp Video 2025-10-30 at 09.04.23.mp4";
 import video1 from "@/assets/WhatsApp Video 2025-10-30 at 09.04.57 (1).mp4";
-import video2 from "@/assets/WhatsApp Video 2025-10-30 at 09.04.34.mp4";
+import video2 from "@/assets/WhatsApp Video 2025-11-04 at 05.57.15.mp4";
 import video3 from "@/assets/WhatsApp Video 2025-10-30 at 09.04.01.mp4";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
