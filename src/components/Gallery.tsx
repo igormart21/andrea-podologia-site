@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { MessageCircle } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import spaceVideo from "@/assets/WhatsApp Video 2025-10-30 at 09.04.23.mp4";
 import video1 from "@/assets/WhatsApp Video 2025-10-30 at 09.04.57 (1).mp4";
@@ -75,6 +76,21 @@ const Gallery = () => {
             <CarouselPrevious className="-left-6" />
             <CarouselNext className="-right-6" />
           </Carousel>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://wa.me/5511972492829?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20melhor%20o%20espa%C3%A7o%20da%20cl%C3%ADnica."
+            target="_blank"
+            rel="noreferrer"
+            className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              <MessageCircle className="h-4 w-4" />
+              Agende uma visita
+            </span>
+            <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
+          </a>
         </div>
       </div>
 

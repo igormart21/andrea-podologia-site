@@ -1,4 +1,4 @@
-import { Baby, Heart, Puzzle, Rainbow } from "lucide-react";
+import { Baby, Heart, MessageCircle, Puzzle, Rainbow } from "lucide-react";
 
 const differentials = [
   {
@@ -24,6 +24,9 @@ const differentials = [
 ];
 
 const Differentials = () => {
+  const whatsappNumber = "5511972492829";
+  const whatsappMessage = encodeURIComponent("Olá! Gostaria de saber mais sobre o atendimento inclusivo.");
+
   return (
     <section className="py-20 bg-gradient-to-b from-muted/20 to-background [content-visibility:auto] [contain-intrinsic-size:1px_800px]">
       <div className="container mx-auto px-4">
@@ -42,6 +45,7 @@ const Differentials = () => {
             Aqui, cada paciente é acolhido com carinho, respeito e cuidado individualizado. 
             Nossa clínica é um espaço seguro e inclusivo, onde todos são bem-vindos.
           </p>
+
         </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -81,6 +85,21 @@ const Differentials = () => {
             <div className="text-3xl font-bold text-primary mb-2">Cuidado</div>
             <p className="text-muted-foreground">Personalizado e Humanizado</p>
           </div>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noreferrer"
+            className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              <MessageCircle className="h-4 w-4" />
+              Agende pelo WhatsApp
+            </span>
+            <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
+          </a>
         </div>
       </div>
     </section>

@@ -34,7 +34,7 @@ const Contact = () => {
                     <Phone className="h-5 w-5 md:h-6 md:w-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1 md:mb-2">Telefone</h3>
+                    <h3 className="font-semibold text-foreground mb-1 md:mb-2">Telefone <span className="text-muted-foreground">/ WhatsApp</span></h3>
                     <p className="text-foreground font-medium text-lg">
                       <a href="tel:+5511972492829">(11) 97249-2829</a>
                     </p>
@@ -57,13 +57,17 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1 md:mb-2">Endereço</h3>
                     <p className="text-foreground font-medium mb-2">
-                      Estrada do Campo Limpo, 1062<br />
-                      São Paulo - SP
+                      Estr. do Campo Limpo, 1062 - Vila Prel, São Paulo - SP, 05777-000
                     </p>
-                    <Button 
-                      variant="link" 
+                    <Button
+                      variant="link"
                       className="p-0 h-auto text-primary text-sm md:text-base"
-                      onClick={() => window.open("https://maps.google.com/?q=Estrada+do+Campo+Limpo+1062", '_blank')}
+                      onClick={() =>
+                        window.open(
+                          "https://maps.google.com/?q=Estr.+do+Campo+Limpo,+1062+-+Vila+Prel,+S%C3%A3o+Paulo+-+SP,+05777-000",
+                          "_blank"
+                        )
+                      }
                     >
                       Ver no Google Maps
                     </Button>
@@ -110,7 +114,7 @@ const Contact = () => {
             {/* Map */}
             <div className="bg-card rounded-xl border border-border/50 shadow-sm overflow-hidden h-[360px] md:h-[500px] animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0!2d-46.7!3d-23.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM2JzAwLjAiUyA0NsKwNDInMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps?q=Estr.+do+Campo+Limpo,+1062+-+Vila+Prel,+S%C3%A3o+Paulo+-+SP,+05777-000&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -129,14 +133,18 @@ const Contact = () => {
             <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
               Agende agora seu atendimento e descubra como podemos ajudar você a ter pés mais saudáveis e felizes!
             </p>
-            <Button 
-              variant="hero" 
-              className="w-full sm:w-auto h-12 md:h-auto"
-              onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative inline-flex overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
             >
-              <MessageCircle className="h-5 w-5" />
-              Agendar pelo WhatsApp
-            </Button>
+              <span className="relative z-10 flex items-center gap-2">
+                <MessageCircle className="h-5 w-5" />
+                Agendar pelo WhatsApp
+              </span>
+              <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
+            </a>
           </div>
         </div>
       </div>

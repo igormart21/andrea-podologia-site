@@ -106,15 +106,15 @@ const Header = () => {
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-                  {menuItems.map((item) => (
-                    <button
-                      key={item.href}
-                      onClick={() => scrollToSection(item.href)}
+        {menuItems.map((item) => (
+          <button
+            key={item.href}
+            onClick={() => scrollToSection(item.href)}
             className="hover:text-[#dedede] transition-all"
-                    >
-                      {item.label}
-                    </button>
-                  ))}
+          >
+            {item.label}
+          </button>
+        ))}
         <a
           href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
           target="_blank"

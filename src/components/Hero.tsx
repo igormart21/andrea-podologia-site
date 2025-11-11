@@ -56,7 +56,10 @@ const Hero = () => {
               <span className="text-white drop-shadow-lg block">Pés Saudáveis e Sem Dor!</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/95 mb-8 leading-relaxed drop-shadow-md max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p
+              className="text-lg md:text-xl text-white/95 mb-8 leading-relaxed drop-shadow-md max-w-2xl animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
               Cuidado acolhedor e sem dor para seus pés.
             </p>
             

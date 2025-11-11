@@ -152,8 +152,8 @@ const Services = () => {
               <div key={index} className="animate-fade-in flex flex-col h-full" style={{ animationDelay: `${index * 0.05}s` }}>
                 <div className="h-56 md:h-60 w-full overflow-hidden rounded-2xl bg-white/10 border border-white/20 shadow-sm flex items-center justify-center mb-4">
                   {service.image ? (
-                    <img 
-                      src={service.image} 
+                    <img
+                      src={service.image}
                       alt={service.title}
                       className={`w-full h-full object-cover ${service.title === "Micose (Onicomicose)" ? "object-[center_45%]" : "object-[center_60%]"}`}
                     />
