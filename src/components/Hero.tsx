@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/WhatsApp Image 2025-11-06 at 08.04.28.jpeg";
 import { useEffect, useRef } from "react";
+import whatsappLogo from "@/assets/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png-1.webp";
 
 const Hero = () => {
   const whatsappNumber = "5511972492829";
@@ -70,10 +69,10 @@ const Hero = () => {
                 rel="noreferrer"
                 className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  <MessageCircle className="h-4 w-4" />
-                  Agendar Agora
-                </span>
+              <span className="relative z-10 flex items-center gap-2">
+                <img src={whatsappLogo} alt="WhatsApp" className="h-6 w-6" />
+                Agendar Agora
+              </span>
                 <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
               </a>
             </div>

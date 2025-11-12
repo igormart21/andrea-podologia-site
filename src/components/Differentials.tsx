@@ -1,4 +1,5 @@
-import { Baby, Heart, MessageCircle, Puzzle, Rainbow } from "lucide-react";
+import { Baby, Heart, Puzzle, Rainbow } from "lucide-react";
+import whatsappLogo from "@/assets/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png-1.webp";
 
 const differentials = [
   {
@@ -95,7 +96,7 @@ const Differentials = () => {
             className="group relative overflow-hidden rounded-2xl bg-white px-6 py-2 text-sm font-medium tracking-wide no-underline border-2 border-transparent hover:border-[#7FA384] text-white transition-colors duration-400 hover:text-[#7FA384] active:text-[#7FA384]"
           >
             <span className="relative z-10 flex items-center gap-2">
-              <MessageCircle className="h-4 w-4" />
+              <img src={whatsappLogo} alt="WhatsApp" className="h-6 w-6" />
               Agende pelo WhatsApp
             </span>
             <span className="absolute left-[-10%] top-0 z-0 h-full w-[120%] -skew-x-12 bg-[#7FA384] transition-transform duration-400 group-hover:translate-x-full active:translate-x-full" />
