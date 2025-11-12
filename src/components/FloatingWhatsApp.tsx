@@ -8,7 +8,7 @@ const FloatingWhatsApp = () => {
     <button
       aria-label="Abrir WhatsApp"
       onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank")}
-      className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-white hover:bg-white border border-border/50 shadow-xl flex items-center justify-center transition-transform hover:scale-105"
+      className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-[#4F705C] hover:bg-[#436351] border border-[#3d5644] shadow-xl flex items-center justify-center transition-transform hover:scale-105"
     >
       <img src={whatsappLogo} alt="WhatsApp" className="h-10 w-10" />
     </button>
