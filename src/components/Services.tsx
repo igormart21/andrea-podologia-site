@@ -9,6 +9,7 @@ import calosFissurasImg from "@/assets/20-calos-o-que-fazer.jpg";
 import laserImg from "@/assets/micose.jpg";
 import autismoImg from "@/assets/fisioterapia-no-autismo.jpg";
 import orteseImg from "@/assets/WhatsApp Image 2025-11-04 at 07.26.29.jpeg";
+import whatsappLogo from "@/assets/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png-1.webp";
 
 type ServiceItem = {
   icon: any;
@@ -185,7 +186,10 @@ const Services = () => {
                       className="w-full mt-auto bg-white text-[#7FA384] hover:bg-white/90 border border-white"
                       onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank')}
                     >
-                      Agendar no WhatsApp
+                      <span className="flex items-center justify-center gap-2">
+                        <img src={whatsappLogo} alt="WhatsApp" className="h-6 w-6" />
+                        Agendar no WhatsApp
+                      </span>
                     </Button>
                   </CardContent>
                 </Card>

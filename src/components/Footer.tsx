@@ -7,10 +7,9 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">Andrea Lima</h3>
+              <h3 className="text-2xl font-bold mb-4">Clínica da Podóloga Andrea Lima</h3>
               <p className="text-secondary-foreground leading-relaxed">
-                Podóloga especializada em cuidados com os pés, 
-                oferecendo atendimento humanizado e de excelência.
+                Podóloga especializada em cuidados com os pés, oferecendo atendimento humanizado e de excelência.
               </p>
             </div>
             
@@ -30,15 +29,15 @@ const Footer = () => {
               <h4 className="font-semibold mb-4 text-lg">Contato</h4>
               <ul className="space-y-2 text-secondary-foreground">
                 <li className="font-medium">(11) 97249-2829</li>
-                <li>Estrada do Campo Limpo, 1062</li>
-                <li>São Paulo - SP</li>
+                <li>Estr. do Campo Limpo, 1062 - Vila Prel</li>
+                <li>São Paulo - SP, 05777-000</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-secondary-foreground/20 pt-8 text-center">
             <p className="text-secondary-foreground flex items-center justify-center gap-2">
-              Feito com <Heart className="h-4 w-4 fill-current" /> por Clínica de Podologia Andrea Lima
+              Feito com <Heart className="h-4 w-4 fill-current" /> por Clínica da Podóloga Andrea Lima
             </p>
             <p className="text-sm text-secondary-foreground mt-2">
               © {new Date().getFullYear()} - Todos os direitos reservados • CNPJ: 205.860.538-16
